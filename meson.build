@@ -6,6 +6,7 @@ src = ['adler32.c', 'crc32.c', 'deflate.c', 'infback.c', 'inffast.c', 'inflate.c
 
 zlib = library('z', src,
   c_args : ['-DZLIB_DLL'],
+  install : true,
   version : meson.project_version())
 
 incdir = include_directories('.')
